@@ -11,6 +11,8 @@ FILES DESCRIPTION:
 
 Note1: (script usage and input files information)
 
+command line to run the script: "awk -f <script file> <input file>"
+
 For "script7.sh", I have added the raw input file "action-timestamp.out" I used to generate the "histo-realtime.dat" output file. After running the script it will generate a file with three columns, the "timestamp" is in first 2 columns and third column is the count of the actions performed. Later, I converted the timestamp from UNIX format to human readable format using R parameter "as.POSIXct(timestamps, origin="1970-01-01")".
 
  For Graphs, A, B, C, D, I have added the general raw script (script2.sh) of how I generated the input file. This script is an accumulation of linux commands. The file "tmp" is the file with all the actions performed in a particular time frame. For example, for Graph A. I extracted from the dataset all the actions performed in the time-frame "2015-04-08,08:41:59 (1428482519062: timestamp), 2015-04-08,08:58:39 (1428483519062: timestamp)" . Similarly, I performed the same steps for Graph B, C and D.
